@@ -1,10 +1,15 @@
+import os
+
 PALAVRA = "tentativa"
 
 plTemp = "*" * len(PALAVRA)
 
 verify = True
 while verify:
-    l = input("Digite uma letra")
+    print(plTemp)
+    l = input("Digite uma letra: ")
+    os.system('cls')
+
     plTempTemp = ''
     if l in PALAVRA:
         c=0
@@ -19,7 +24,6 @@ while verify:
             c+=1
             
         plTemp = plTempTemp
-        print(plTemp)
     else:
         print("Digite outra letra")
 
