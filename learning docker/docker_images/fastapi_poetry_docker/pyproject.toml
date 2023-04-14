@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "primeiro-docker"
+name = "fastapi-poetry-docker"
 version = "0.1.0"
 description = ""
 authors = ["lucas <lucas.lrodrigues@sptech.school>"]
 readme = "README.md"
-packages = [{include = "primeiro_docker"}]
+packages = [{include = "fastapi_poetry_docker"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"

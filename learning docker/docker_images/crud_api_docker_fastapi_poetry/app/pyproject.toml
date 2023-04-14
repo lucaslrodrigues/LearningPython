@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "docker-app"
+name = "crud-api-docker-fastapi-poetry"
 version = "0.1.0"
 description = ""
 authors = ["lucas <lucas.lrodrigues@sptech.school>"]
 readme = "README.md"
-packages = [{include = "docker_app"}]
+packages = [{include = "crud_api_docker_fastapi_poetry"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
