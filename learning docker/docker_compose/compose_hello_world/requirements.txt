@@ -1,0 +1,5 @@
+fastapi
+poetry==1.1.15
+psycopg2-binary==2.8.6
+SQLAlchemy==1.4.47
+uvicorn==0.22.0
