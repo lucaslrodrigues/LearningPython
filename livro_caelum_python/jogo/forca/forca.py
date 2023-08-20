@@ -2,31 +2,40 @@ from typing import List
 
 
 def main():
-	palavra_secreta: str = "banana"
+    palavra_secreta: str = "banana"
+    letras_acertadas: List[str] = []
+    terminou: bool = False
+    erros: int = 0
+    rodada: int = 0
 
-	letras_acertadas: List[str] = []
-	for letra in palavra_secreta:
-		letras_acertadas.append("-")
-	terminou: bool = False;
-	erros: int = 0
-	while not terminou:
-		cont: int = 0
-		print(erros)
-		if erros >= 6:
-			return print("Você perdeu o jogo")
-		print(f'Letras acertadas: {"".join(letras_acertadas)}\n\
-Vidas restantes: {7 - cont} ') # join une a string vazia ás strings presentes na lista
-		chute = input("Qual letra: ")
+    for letra in palavra_secreta:
+        letras_acertadas.append("-")
 
-		for letra in palavra_secreta:
-			if chute.upper() == palavra_secreta[cont].upper():
-				letras_acertadas[cont] = letra
-				
-			cont += 1
-		if list(palavra_secreta) == letras_acertadas:
-			terminou = True
-			print(f'Você acertou a palavra secreta %s' % (palavra_secreta))
+    while not terminou:
+        cont: int = 0
+        valida_erro: bool = False
+
+        if erros > 6:
+            return print("Você perdeu o jogo")
+        print(letras_acertadas)
+        print(f'Letras acertadas: {"".join(letras_acertadas)}\n\
+Vidas restantes: {7 - rodada} ')  # join une a string vazia ás strings presentes na lista
+
+        chute = input("Qual letra: ")
+        for letra in range(1, len(palavra_secreta) + 1):
+            if chute.upper() == list(palavra_secreta)[cont].upper():
+                letras_acertadas[cont] = list(palavra_secreta)[cont]
+                valida_erro = True
+            cont += 1
+
+        if not valida_erro:
+            erros += 1
+
+        if list(palavra_secreta) == letras_acertadas:
+            terminou = True
+            print(f'Você acertou a palavra secreta %s' % (palavra_secreta))
+        rodada += 1
 
 
 if __name__ == "__main__":
-	main()
+    main()
