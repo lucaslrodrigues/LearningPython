@@ -1,7 +1,14 @@
 from typing import List
-
+from open_file import OpenFile
 
 def main():
+    file = OpenFile()
+    file.create_file()
+
+    
+    file.append_text()
+
+
     palavra_secreta: str = "banana"
     letras_acertadas: List[str] = []
     terminou: bool = False
