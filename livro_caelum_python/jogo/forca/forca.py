@@ -4,12 +4,11 @@ from open_file import OpenFile
 def main():
     file = OpenFile()
     file.create_file()
-
+    palavras = []
     
     file.append_text()
+    file.close_file()
 
-
-    palavra_secreta: str = "banana"
     letras_acertadas: List[str] = []
     terminou: bool = False
     erros: int = 0

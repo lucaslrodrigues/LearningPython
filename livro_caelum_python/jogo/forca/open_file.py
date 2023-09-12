@@ -33,6 +33,7 @@ class OpenFile:
         line: List = []
         [line.append(i.strip()) for i in self.__arquivo.readlines()]
         print(line)
+	return line
 
 
 if __name__ == "__main__":
