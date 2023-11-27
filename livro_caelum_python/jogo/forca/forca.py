@@ -45,3 +45,4 @@ Vidas restantes: {7 - rodada} ')  # join une a string vazia ás strings presente
 
 if __name__ == "__main__":
     main()
+
