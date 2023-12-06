@@ -6,8 +6,9 @@ def main():
     file.create_file()
     palavras = []
     
-    file.append_text()
+    file.append_text(palavras)
     file.close_file()
+    palavra_secreta = file.receber_aleatoria()
 
     letras_acertadas: List[str] = []
     terminou: bool = False
