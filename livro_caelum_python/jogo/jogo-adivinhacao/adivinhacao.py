@@ -13,9 +13,9 @@ def execute() -> str:
 
         if response == numero_secreto:
             return f'Você acertou o numero secreto %d' % numero_secreto
-        elif response > numero_secreto and partida.getRodada() < 3:
+        elif response > numero_secreto and partida.getRodada() < partida.getTentativas():
             print("Você errou acima do número secreto")
-        elif response < numero_secreto and partida.getRodada() < 3:
+        elif response < numero_secreto and partida.getRodada() < partida.getTentativas():
                  print("Você errou abaixo do numero secreto")
         else:
             return "Acabaram as tentativas"
